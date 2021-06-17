@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/image_poster"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_poster"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:textSize="@dimen/text_20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorText"
+        tools:text="Title"/>
+
+    <TextView
+        android:textColor="@color/colorText"
+        android:id="@+id/tv_duration_title"
+        android:text="@string/text_duration"
+        android:layout_width="0dp"
+        android:textSize="@dimen/text_14sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image_poster"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_8dp"/>
+
+    <TextView
+        android:id="@+id/tv_duration"
+        tools:text="2h 1m"
+        android:layout_width="0dp"
+        android:textSize="@dimen/text_14sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image_poster"
+        app:layout_constraintTop_toBottomOf="@+id/tv_duration_title"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:layout_marginEnd="@dimen/margin_8dp"/>
+
+    <TextView
+        android:textColor="@color/colorText"
+        android:id="@+id/tv_rating_title"
+        android:text="@string/text_rating"
+        android:textSize="@dimen/text_14sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image_poster"
+        app:layout_constraintTop_toBottomOf="@+id/tv_duration"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_8dp"/>
+
+    <TextView
+        android:id="@+id/tv_rating"
+        tools:text="8/10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image_poster"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rating_title"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:layout_marginEnd="@dimen/margin_8dp"/>
+
+    <TextView
+        android:textColor="@color/colorText"
+        android:id="@+id/tv_release_title"
+        android:text="@string/text_release"
+        android:textSize="@dimen/text_14sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image_poster"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rating"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_8dp"/>
+
+    <TextView
+        android:id="@+id/tv_release"
+        tools:text="8 March 2021"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/image_poster"
+        app:layout_constraintTop_toBottomOf="@+id/tv_release_title"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:layout_marginEnd="@dimen/margin_8dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:layout_constraintTop_toBottomOf="@+id/tv_release"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/fab_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_favorite"
+        app:backgroundTint="@color/colorWhite"
+        app:maxImageSize="24dp" />
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="@dimen/text_18sp"
+        android:textColor="@color/colorText"
+        android:id="@+id/tv_desc_title"
+        android:text="@string/text_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_poster"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:layout_marginEnd="@dimen/margin_8dp"/>
+
+    <TextView
+        android:textSize="@dimen/text_14sp"
+        android:id="@+id/tv_description"
+        tools:text="Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc_title"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:layout_marginEnd="@dimen/margin_8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
